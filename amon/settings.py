@@ -241,7 +241,7 @@ KEEP_DATA = config.get('keep_data', None)
 
 
 # SMTP Settings - optionally store these in a config file
-smtp = config.get('smtp', False)
+smtp = config.get('smtp', {})
 EMAIL_USE_TLS = smtp.get('use_tls', False)
 EMAIL_HOST = smtp.get('host', 'localhost')
 EMAIL_PORT = smtp.get('port', 25)
