@@ -16,7 +16,7 @@ PROJECT_ROOT = os.path.dirname(APPS_ROOT)
 TESTING = True if 'test' in sys.argv else False
 TRAVIS = True if os.getenv('TRAVIS') else False
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ACCOUNT_ID = 1
@@ -233,7 +233,7 @@ HOSTNAME = host_struct.hostname
 
 if STATIC_URL is None:
     STATIC_URL = '{0}/static/'.format(HOST)
-
+STATICFILES_DIRS = (os.path.join(APPS_ROOT, 'static'), )
 SSL = config.get('ssl', None)
 
 #  Global retention period in days, overwrites settings set from the web interface

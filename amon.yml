@@ -1,4 +1,5 @@
-host: https://monitoring.amon.cx
+host: https://localhost:8000/
+static_url: '/static/'
 mongo_uri: mongodb://mongodb:27017
 smtp:
   host: 127.0.0.1
